@@ -41,3 +41,4 @@ e:\UEA\Tercer semestre\Codigos_2425_3_Semestres\obj\Debug\net9.0\refint\Codigos_
 e:\UEA\Tercer semestre\Codigos_2425_3_Semestres\obj\Debug\net9.0\Codigos_2425_3_Semestres.pdb
 E:\UEA\Tercer semestre\Codigos_2425_3_Semestres\obj\Debug\net9.0\Codigos_2425_3_Semestres.genruntimeconfig.cache
 E:\UEA\Tercer semestre\Codigos_2425_3_Semestres\obj\Debug\net9.0\ref\Codigos_2425_3_Semestres.dll
+e:\UEA\Tercer semestre\Codigos_2425_3_Semestres\obj\Debug\net9.0\Codigos_2425_3_Semestres.sourcelink.json
