@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Codigos_2425_3_Semestres/1.0.0": {
+        "runtime": {
+          "Codigos_2425_3_Semestres.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Codigos_2425_3_Semestres/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

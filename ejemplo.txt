@@ -1,0 +1,6 @@
+public static class Colas
+{
+    public static void colas(){
+
+    }
+}
