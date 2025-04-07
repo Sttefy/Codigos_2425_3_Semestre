@@ -1,6 +1,15 @@
 public static class Colas
 {
-    public static void colas(){
+    public static void colas()
+    {
 
+    }
+}
+
+namespace MiProyecto
+{
+    class Grafo
+    {
+        // Tu código aquí...
     }
 }

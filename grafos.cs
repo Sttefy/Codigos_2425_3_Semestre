@@ -1,19 +1,7 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-Console.WriteLine("Universidad Estatal Amazonica");
-Console.WriteLine("=====================================");
-Console.WriteLine("Mariuxi Stefania Gavilanez Gutierrez");
-Console.WriteLine("Y");
-Console.WriteLine("Luis Eduardo Argudo Guzman");
-Console.WriteLine("=====================================");
-Console.WriteLine("Tecnologias de la información");
-Console.WriteLine("=====================================");
-Console.WriteLine("Tercer Semestre");
-Console.WriteLine("=====================================");
-Console.WriteLine("Grafo de conexiones");
-Console.WriteLine("=====================================");
-
-
+namespace MiGrafo
+{
+    class Grafos
+    {
         Grafo grafo = new Grafo();
         class Grafo
         {
@@ -92,4 +80,6 @@ Console.WriteLine("=====================================");
         }
     }
     
+}
+    }
 }
