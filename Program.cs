@@ -3,8 +3,6 @@
 Console.WriteLine("Universidad Estatal Amazonica");
 Console.WriteLine("=====================================");
 Console.WriteLine("Mariuxi Stefania Gavilanez Gutierrez");
-Console.WriteLine("Y");
-Console.WriteLine("Luis Eduardo Argudo Guzman");
 Console.WriteLine("=====================================");
 Console.WriteLine("Tecnologias de la información");
 Console.WriteLine("=====================================");
@@ -14,51 +12,58 @@ Console.WriteLine("Grafo de conexiones");
 Console.WriteLine("=====================================");
 
 
-Grafo grafo = new Grafo();
-
-grafo.AgregarVertice("Guayaquil");
-grafo.AgregarVertice("Quito");
-grafo.AgregarVertice("Cuenca");
-grafo.AgregarVertice("Manta");
-
-grafo.AgregarAristaDirigida("Guayaquil", "Quito");
-grafo.AgregarAristaDirigida("Quito", "Cuenca");
-grafo.AgregarAristaDirigida("Manta", "Guayaquil");
-
-grafo.MostrarGrafo();
-
-class Grafo
+List<string> catalogoRevistas = new List<string>
 {
-    private Dictionary<string, List<string>> adyacencia;
+    "Revista Ciencia Hoy",
+    "Tecnología y Futuro",
+    "Historia y Cultura",
+    "Mundo Deportivo",
+    "Arte y Diseño",
+    "Salud y Bienestar",
+    "Viajes y Aventura",
+    "Economía Global",
+    "Gastronomía Moderna",
+    "Literatura Contemporánea"
+};
 
-    public Grafo()
+void MostrarMenu()
+{
+    while (true)
     {
-        adyacencia = new Dictionary<string, List<string>>();
-    }
+        Console.WriteLine("\nMenú:");
+        Console.WriteLine("1. Buscar título");
+        Console.WriteLine("2. Salir");
+        Console.Write("Seleccione una opción: ");
 
-    public void AgregarVertice(string nodo)
-    {
-        if (!adyacencia.ContainsKey(nodo))
-            adyacencia[nodo] = new List<string>();
-    }
-
-    public void AgregarAristaDirigida(string origen, string destino)
-    {
-        if (adyacencia.ContainsKey(origen))
-            adyacencia[origen].Add(destino);
-    }
-
-    public void MostrarGrafo()
-    {
-        Console.WriteLine("Grafo de conexiones:");
-        foreach (var nodo in adyacencia)
+        string opcion = Console.ReadLine();
+        if (opcion == "1")
         {
-            Console.Write(nodo.Key + " -> ");
-            foreach (var vecino in nodo.Value)
-            {
-                Console.Write(vecino + " ");
-            }
-            Console.WriteLine();
+            Console.Write("Ingrese el título a buscar: ");
+            string titulo = Console.ReadLine();
+
+            bool encontrado = BuscarTituloRecursivo(catalogoRevistas, titulo, 0);
+            Console.WriteLine(encontrado ? "Encontrado" : "No encontrado");
+        }
+        else if (opcion == "2")
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Opción inválida. Intente nuevamente.");
         }
     }
 }
+
+bool BuscarTituloRecursivo(List<string> catalogo, string titulo, int indice)
+{
+    if (indice >= catalogo.Count)
+        return false;
+    if (catalogo[indice].Equals(titulo, StringComparison.OrdinalIgnoreCase))
+        return true;
+    return BuscarTituloRecursivo(catalogo, titulo, indice + 1);
+}
+
+// Llamada inicial al menú
+MostrarMenu();
+

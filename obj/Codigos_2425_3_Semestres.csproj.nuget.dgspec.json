@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\Codigos_2425_3_Semestres.csproj": {}
+    "E:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\Codigos_2425_3_Semestres.csproj": {}
   },
   "projects": {
-    "e:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\Codigos_2425_3_Semestres.csproj": {
+    "E:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\Codigos_2425_3_Semestres.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\Codigos_2425_3_Semestres.csproj",
+        "projectUniqueName": "E:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\Codigos_2425_3_Semestres.csproj",
         "projectName": "Codigos_2425_3_Semestres",
-        "projectPath": "e:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\Codigos_2425_3_Semestres.csproj",
+        "projectPath": "E:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\Codigos_2425_3_Semestres.csproj",
         "packagesPath": "C:\\Users\\jfern\\.nuget\\packages\\",
-        "outputPath": "e:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\obj\\",
+        "outputPath": "E:\\UEA\\Tercer semestre\\Codigos_2425_3_Semestres\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jfern\\AppData\\Roaming\\NuGet\\NuGet.Config"
