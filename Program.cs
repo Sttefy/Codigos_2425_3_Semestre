@@ -12,58 +12,77 @@ Console.WriteLine("Grafo de conexiones");
 Console.WriteLine("=====================================");
 
 
-List<string> catalogoRevistas = new List<string>
-{
-    "Revista Ciencia Hoy",
-    "Tecnología y Futuro",
-    "Historia y Cultura",
-    "Mundo Deportivo",
-    "Arte y Diseño",
-    "Salud y Bienestar",
-    "Viajes y Aventura",
-    "Economía Global",
-    "Gastronomía Moderna",
-    "Literatura Contemporánea"
-};
+ArbolBinario arbol = new ArbolBinario();
 
-void MostrarMenu()
+arbol.Insertar(10);
+arbol.Insertar(5);
+arbol.Insertar(15);
+arbol.Insertar(3);
+arbol.Insertar(7);
+
+Console.WriteLine(arbol.Buscar(7) ? "Encontrado" : "No encontrado");
+
+Console.WriteLine("Recorrido inorden:");
+arbol.RecorrerInOrden(arbol.Raiz);
+Console.WriteLine();
+
+class Nodo
 {
-    while (true)
+    public int Valor;
+    public Nodo Izquierdo, Derecho;
+
+    public Nodo(int valor)
     {
-        Console.WriteLine("\nMenú:");
-        Console.WriteLine("1. Buscar título");
-        Console.WriteLine("2. Salir");
-        Console.Write("Seleccione una opción: ");
-
-        string opcion = Console.ReadLine();
-        if (opcion == "1")
-        {
-            Console.Write("Ingrese el título a buscar: ");
-            string titulo = Console.ReadLine();
-
-            bool encontrado = BuscarTituloRecursivo(catalogoRevistas, titulo, 0);
-            Console.WriteLine(encontrado ? "Encontrado" : "No encontrado");
-        }
-        else if (opcion == "2")
-        {
-            break;
-        }
-        else
-        {
-            Console.WriteLine("Opción inválida. Intente nuevamente.");
-        }
+        Valor = valor;
+        Izquierdo = Derecho = null;
     }
 }
 
-bool BuscarTituloRecursivo(List<string> catalogo, string titulo, int indice)
+class ArbolBinario
 {
-    if (indice >= catalogo.Count)
-        return false;
-    if (catalogo[indice].Equals(titulo, StringComparison.OrdinalIgnoreCase))
-        return true;
-    return BuscarTituloRecursivo(catalogo, titulo, indice + 1);
+    public Nodo Raiz;
+
+    public void Insertar(int valor)
+    {
+        Raiz = InsertarRecursivo(Raiz, valor);
+    }
+
+    private Nodo InsertarRecursivo(Nodo nodo, int valor)
+    {
+        if (nodo == null)
+            return new Nodo(valor);
+
+        if (valor < nodo.Valor)
+            nodo.Izquierdo = InsertarRecursivo(nodo.Izquierdo, valor);
+        else
+            nodo.Derecho = InsertarRecursivo(nodo.Derecho, valor);
+
+        return nodo;
+    }
+
+    public bool Buscar(int valor)
+    {
+        return BuscarRecursivo(Raiz, valor);
+    }
+
+    private bool BuscarRecursivo(Nodo nodo, int valor)
+    {
+        if (nodo == null)
+            return false;
+
+        if (nodo.Valor == valor)
+            return true;
+
+        return valor < nodo.Valor ? BuscarRecursivo(nodo.Izquierdo, valor) : BuscarRecursivo(nodo.Derecho, valor);
+    }
+
+    public void RecorrerInOrden(Nodo nodo)
+    {
+        if (nodo != null)
+        {
+            RecorrerInOrden(nodo.Izquierdo);
+            Console.Write(nodo.Valor + " ");
+            RecorrerInOrden(nodo.Derecho);
+        }
+    }
 }
-
-// Llamada inicial al menú
-MostrarMenu();
-

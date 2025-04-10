@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Codigos_2425_3_Semestres")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73861b4ec6c4f011a1355a231fdaf517848eaa2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7ae316996d15970509ddefbf7d3c93e16d15433")]
 [assembly: System.Reflection.AssemblyProductAttribute("Codigos_2425_3_Semestres")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Codigos_2425_3_Semestres")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
